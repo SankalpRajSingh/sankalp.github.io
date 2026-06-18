@@ -487,9 +487,7 @@
 
   <div class="card">
     <p><strong>Email:</strong> rajsankalp805@gmail.com</p>
-    <p><strong>LinkedIn:</strong> https://www.linkedin.com/in/sankalp-raj-singh-78a628208</p>
-    <p><strong>GitHub:</strong> https://github.com/SankalpRajSingh</p>
-    <p><strong>Portfolio:</strong> https://SankalpRajSingh.github.io</p>
+    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/sankalp-raj-singh-78a628208">Sankalp Raj Singh</a></p>
   </div>
 </section>
 
@@ -497,5 +495,214 @@
   <p>© 2026 Sankalp Raj Singh | Software Developer Portfolio</p>
 </footer>
 
+  <!-- Option-Based Portfolio Chatbot -->
+<style>
+  .chatbot-toggle {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #ff6a00;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 18px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    z-index: 2000;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    transition: 0.3s;
+    animation: pulse 2s infinite;
+  }
+
+  .chatbot-toggle img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fff;
+  }
+
+  .chatbot-toggle:hover {
+    transform: translateY(-3px);
+    background: #ff7f24;
+  }
+
+  @keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(255,106,0,0.7); }
+    70% { box-shadow: 0 0 0 12px rgba(255,106,0,0); }
+    100% { box-shadow: 0 0 0 0 rgba(255,106,0,0); }
+  }
+
+  .chatbot-box {
+    position: fixed;
+    bottom: 100px;
+    right: 25px;
+    width: 350px;
+    background: #1b1b1b;
+    border: 1px solid #333;
+    border-radius: 18px;
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 2000;
+    box-shadow: 0 15px 45px rgba(0,0,0,0.5);
+  }
+
+  .chatbot-header {
+    background: #ff6a00;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .chatbot-header img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fff;
+  }
+
+  .chatbot-header small {
+    color: #fff3e8;
+  }
+
+  .chatbot-messages {
+    padding: 15px;
+    max-height: 390px;
+    overflow-y: auto;
+    font-size: 14px;
+  }
+
+  .bot-msg {
+    background: #2a2a2a;
+    color: #fff;
+    padding: 11px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+  }
+
+  .chat-option {
+    display: block;
+    width: 100%;
+    background: #111;
+    color: #fff;
+    border: 1px solid #444;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: left;
+  }
+
+  .chat-option:hover {
+    background: #ff6a00;
+    border-color: #ff6a00;
+  }
+
+  .chat-link {
+    color: #ff6a00;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  @media (max-width: 500px) {
+    .chatbot-box {
+      width: 90%;
+      right: 5%;
+      bottom: 95px;
+    }
+
+    .chatbot-toggle {
+      right: 15px;
+      bottom: 18px;
+    }
+  }
+</style>
+
+<button class="chatbot-toggle" onclick="toggleChatbot()">
+  <img src="profile1.jpg" alt="Sankalp">
+  Ask About Me
+</button>
+
+<div class="chatbot-box" id="chatbotBox">
+  <div class="chatbot-header">
+    <img src="profile1.jpg" alt="Sankalp">
+    <div>
+      <strong>Sankalp Raj Singh</strong><br>
+      <small>Software Developer • Replies instantly</small>
+    </div>
+  </div>
+
+  <div class="chatbot-messages" id="chatMessages">
+    <div class="bot-msg">
+      Hi! Select a question below to know more about me.
+    </div>
+
+    <button class="chat-option" onclick="showAnswer('skills')">What are your technical skills?</button>
+    <button class="chat-option" onclick="showAnswer('experience')">What is your experience?</button>
+    <button class="chat-option" onclick="showAnswer('holtec')">What did you work on at Holtec?</button>
+    <button class="chat-option" onclick="showAnswer('projects')">What projects have you worked on?</button>
+    <button class="chat-option" onclick="showAnswer('certifications')">What certifications do you have?</button>
+    <button class="chat-option" onclick="showAnswer('resume')">Where can I download your resume?</button>
+    <button class="chat-option" onclick="showAnswer('contact')">How can I contact you?</button>
+  </div>
+</div>
+
+<script>
+  function toggleChatbot() {
+    const box = document.getElementById("chatbotBox");
+    box.style.display = box.style.display === "flex" ? "none" : "flex";
+  }
+
+  function showAnswer(type) {
+    let response = "";
+
+    if (type === "skills") {
+      response = "My key skills include C#, ASP.NET Core, ASP.NET MVC, Blazor, SQL Server, Entity Framework Core, REST APIs, JavaScript, HTML, CSS, Git, Azure DevOps, AWS, and SailPoint IdentityIQ.";
+    }
+
+    if (type === "experience") {
+      response = "I have around 3 years of overall experience, including Software Developer experience at Holtec International and Embedded Software Developer experience at PHYTEC India.";
+    }
+
+    if (type === "holtec") {
+      response = "At Holtec International, I worked on enterprise applications, MVC to ASP.NET Core migration, reports, bug fixing, enhancements, SSO implementation, Blazor applications, REST APIs, and SQL optimization.";
+    }
+
+    if (type === "projects") {
+      response = "My major work highlights include Corp Application Modernization, Generic Timesheet Report, Material Details API, SSO Implementation, SailPoint IdentityIQ CSV Provisioning Lab, and Smart Street Light Control.";
+    }
+
+    if (type === "certifications") {
+      response = "I have certifications in AWS Solution Architect Course, C# (.NET 6/7/8), REST APIs, Entity Framework Core, SQL Server, and Object-Oriented Programming.";
+    }
+
+    if (type === "resume") {
+      response = 'You can download my resume here: <a class="chat-link" href="SankalpRajSingh_Resume.pdf" target="_blank">Download Resume</a>';
+    }
+
+    if (type === "contact") {
+      response = 'Email: <a class="chat-link" href="mailto:rajsankalp805@gmail.com">rajsankalp805@gmail.com</a><br>LinkedIn: <a class="chat-link" href="https://www.linkedin.com/in/sankalp-raj-singh-78a628208" target="_blank">View LinkedIn</a><br>GitHub: <a class="chat-link" href="https://github.com/SankalpRajSingh" target="_blank">View GitHub</a>';
+    }
+
+    addBotMessage(response);
+  }
+
+  function addBotMessage(text) {
+    const messages = document.getElementById("chatMessages");
+    const div = document.createElement("div");
+    div.className = "bot-msg";
+    div.innerHTML = text;
+    messages.appendChild(div);
+    messages.scrollTop = messages.scrollHeight;
+  }
+</script>
+  
 </body>
 </html>
