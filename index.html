@@ -14,75 +14,77 @@
     }
 
     body {
-      background: #f4f6f8;
-      color: #222;
+      background: #f4f7fb;
+      color: #1f2937;
       line-height: 1.6;
     }
 
     header {
-      background: #0f172a;
+      background: linear-gradient(135deg, #0f172a, #1d4ed8);
       color: white;
-      padding: 50px 20px;
       text-align: center;
+      padding: 70px 20px;
     }
 
     header h1 {
-      font-size: 42px;
+      font-size: 44px;
       margin-bottom: 10px;
     }
 
     header p {
       font-size: 18px;
-      color: #cbd5e1;
+      color: #e5e7eb;
+      margin-bottom: 25px;
+    }
+
+    .buttons a {
+      display: inline-block;
+      margin: 8px;
+      padding: 11px 18px;
+      background: white;
+      color: #1d4ed8;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
     }
 
     nav {
-      background: #1e293b;
-      padding: 12px;
+      background: #0f172a;
       text-align: center;
+      padding: 13px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
     nav a {
       color: white;
-      margin: 0 15px;
       text-decoration: none;
+      margin: 0 13px;
       font-weight: bold;
+      font-size: 14px;
     }
 
     section {
-      max-width: 1000px;
+      max-width: 1100px;
       margin: 30px auto;
+      padding: 32px;
       background: white;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      border-radius: 14px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
     }
 
     h2 {
       color: #0f172a;
-      margin-bottom: 15px;
+      margin-bottom: 18px;
       border-bottom: 3px solid #2563eb;
       display: inline-block;
       padding-bottom: 5px;
     }
 
-    .skills span {
-      display: inline-block;
-      background: #e0ecff;
+    h3 {
       color: #1d4ed8;
-      padding: 8px 12px;
-      margin: 6px;
-      border-radius: 20px;
-      font-size: 14px;
-    }
-
-    .project, .experience {
-      margin-bottom: 20px;
-    }
-
-    .project h3, .experience h3 {
-      color: #1e40af;
-      margin-bottom: 6px;
+      margin-bottom: 8px;
     }
 
     ul {
@@ -90,36 +92,70 @@
       margin-top: 8px;
     }
 
-    .buttons a {
-      display: inline-block;
-      margin: 10px 8px;
-      padding: 10px 18px;
-      background: #2563eb;
-      color: white;
-      border-radius: 6px;
-      text-decoration: none;
+    li {
+      margin-bottom: 6px;
     }
 
-    .buttons a:hover {
-      background: #1d4ed8;
+    .skills span {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      padding: 8px 13px;
+      margin: 6px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .card {
+      margin-bottom: 24px;
+      padding: 20px;
+      border-left: 5px solid #2563eb;
+      background: #f8fafc;
+      border-radius: 10px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin-top: 15px;
+    }
+
+    .box {
+      background: #f8fafc;
+      padding: 18px;
+      border-radius: 10px;
+      border: 1px solid #e5e7eb;
+    }
+
+    .box a {
+      color: #1d4ed8;
+      font-weight: bold;
+      text-decoration: none;
     }
 
     footer {
       text-align: center;
-      padding: 20px;
       background: #0f172a;
       color: white;
+      padding: 20px;
       margin-top: 40px;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 700px) {
       header h1 {
-        font-size: 30px;
+        font-size: 32px;
       }
 
       nav a {
         display: block;
         margin: 8px 0;
+      }
+
+      section {
+        margin: 20px 12px;
+        padding: 24px;
       }
     }
   </style>
@@ -127,186 +163,295 @@
 
 <body>
 
-  <header>
-    <h1>Sankalp Raj Singh</h1>
-    <p>Software Developer | C# | ASP.NET Core | Blazor | SQL Server | Entity Framework</p>
+<header>
+  <h1>Sankalp Raj Singh</h1>
+  <p>Software Developer | ASP.NET Core | Blazor | SQL Server | AWS | REST APIs</p>
 
-    <div class="buttons">
-      <a href="mailto:your-email@gmail.com">Email Me</a>
-      <a href="https://www.linkedin.com/in/YOUR-LINKEDIN-ID" target="_blank">LinkedIn</a>
-      <a href="https://github.com/rajsankalp805" target="_blank">GitHub</a>
-      <a href="SankalpRajSingh_Resume.pdf" target="_blank">Download Resume</a>
-    </div>
-  </header>
+  <div class="buttons">
+    <a href="mailto:rajsankalp805@gmail.com">Email Me</a>
+    <a href="https://www.linkedin.com/in/sankalp-raj-singh-78a628208" target="_blank">LinkedIn</a>
+    <a href="https://github.com/rajsankalp805" target="_blank">GitHub</a>
+    <a href="SankalpRajSingh_Resume.pdf" target="_blank">Download Resume</a>
+  </div>
+</header>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#experience">Experience</a>
-    <a href="#projects">Projects</a>
-    <a href="#certifications">Certifications</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<nav>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#experience">Experience</a>
+  <a href="#projects">Projects</a>
+  <a href="#certifications">Certifications</a>
+  <a href="#education">Education</a>
+  <a href="#contact">Contact</a>
+</nav>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      I am a Software Developer with experience in C#, ASP.NET Core, ASP.NET MVC,
-      Blazor, Entity Framework, SQL Server, and backend application development.
-      I enjoy building scalable applications, writing clean code, solving real-world
-      problems, and continuously improving my technical skills.
-    </p>
-    <br />
-    <p>
-      I also have experience in embedded systems and have recently been learning
-      SailPoint IdentityIQ, DevOps, Git, Jenkins, Docker, Kubernetes, Ansible,
-      Terraform, and ELK Stack to strengthen my development and deployment skills.
-    </p>
-  </section>
+<section id="about">
+  <h2>About Me</h2>
+  <p>
+    I am a Software Developer with around 3 years of overall experience across full-stack development,
+    backend development, cloud learning, and embedded systems. I have hands-on experience in ASP.NET Core,
+    ASP.NET MVC, Blazor, C#, SQL Server, Entity Framework Core, REST APIs, JavaScript, HTML, CSS, Git,
+    Azure DevOps, and application modernization.
+  </p>
+  <br>
+  <p>
+    My professional work includes enterprise application development, bug fixing, enhancements, MVC to
+    ASP.NET Core migration, report development, API development, SSO implementation, SQL query optimization,
+    pagination, and performance improvement.
+  </p>
+</section>
 
-  <section id="skills">
-    <h2>Technical Skills</h2>
+<section id="skills">
+  <h2>Technical Skills</h2>
+  <div class="skills">
+    <span>C#</span>
+    <span>C</span>
+    <span>Python</span>
+    <span>ASP.NET Core</span>
+    <span>ASP.NET MVC</span>
+    <span>Blazor</span>
+    <span>Entity Framework Core</span>
+    <span>REST APIs</span>
+    <span>SQL Server</span>
+    <span>Query Optimization</span>
+    <span>JavaScript</span>
+    <span>HTML</span>
+    <span>CSS</span>
+    <span>OOP</span>
+    <span>System Design</span>
+    <span>AWS</span>
+    <span>Cloud Architecture</span>
+    <span>IAM</span>
+    <span>Azure DevOps</span>
+    <span>Git</span>
+    <span>GitHub</span>
+    <span>Agile</span>
+    <span>Scrum</span>
+    <span>Business Analysis</span>
+    <span>Client Communication</span>
+    <span>Embedded C</span>
+    <span>RTOS</span>
+    <span>IoT</span>
+    <span>SailPoint IdentityIQ</span>
+  </div>
+</section>
 
-    <div class="skills">
-      <span>C</span>
-      <span>C#</span>
-      <span>Python</span>
-      <span>ASP.NET Core</span>
-      <span>ASP.NET MVC</span>
-      <span>Blazor</span>
-      <span>Entity Framework</span>
-      <span>SQL Server</span>
-      <span>REST APIs</span>
-      <span>HTML</span>
-      <span>CSS</span>
-      <span>JavaScript</span>
-      <span>Git</span>
-      <span>GitHub</span>
-      <span>Visual Studio</span>
-      <span>Postman</span>
-      <span>SailPoint IdentityIQ</span>
-      <span>MySQL</span>
-      <span>Tomcat</span>
-    </div>
-  </section>
+<section id="experience">
+  <h2>Professional Experience</h2>
 
-  <section id="experience">
-    <h2>Experience</h2>
-
-    <div class="experience">
-      <h3>Software Engineer - Holtec Asia</h3>
-      <p>
-        Worked on enterprise software development using .NET technologies,
-        including ASP.NET Core, Blazor, Entity Framework, and SQL Server.
-      </p>
-      <ul>
-        <li>Developed and maintained web-based business applications.</li>
-        <li>Worked with database operations, APIs, and application logic.</li>
-        <li>Improved application functionality and supported debugging activities.</li>
-        <li>Collaborated with team members in a professional software development environment.</li>
-      </ul>
-    </div>
-
-    <div class="experience">
-      <h3>Embedded Software Engineer - PHYTEC</h3>
-      <p>
-        Worked on embedded systems concepts, device communication, and industrial software-related tasks.
-      </p>
-      <ul>
-        <li>Gained experience in embedded software and hardware-related development.</li>
-        <li>Worked with communication concepts and system-level understanding.</li>
-        <li>Developed strong problem-solving and debugging skills.</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="projects">
-    <h2>Projects</h2>
-
-    <div class="project">
-      <h3>Employee Management System</h3>
-      <p><strong>Tech Stack:</strong> ASP.NET Core, C#, Entity Framework, SQL Server</p>
-      <ul>
-        <li>Designed a web application to manage employee records.</li>
-        <li>Implemented CRUD operations for employee data.</li>
-        <li>Used Entity Framework for database interaction.</li>
-        <li>Created a clean and maintainable application structure.</li>
-      </ul>
-    </div>
-
-    <div class="project">
-      <h3>ASP.NET Core Web API Project</h3>
-      <p><strong>Tech Stack:</strong> ASP.NET Core Web API, C#, SQL Server, Swagger</p>
-      <ul>
-        <li>Created REST APIs for backend operations.</li>
-        <li>Implemented controller, service, and database layers.</li>
-        <li>Tested APIs using Swagger and Postman.</li>
-        <li>Focused on clean API response handling and validation.</li>
-      </ul>
-    </div>
-
-    <div class="project">
-      <h3>SailPoint IdentityIQ - CSV Provisioning Practical</h3>
-      <p><strong>Tech Stack:</strong> SailPoint IdentityIQ, Beanshell, MySQL, Tomcat, CSV Application</p>
-      <ul>
-        <li>Created TrustedCSV and TargetCSV applications in IdentityIQ.</li>
-        <li>Performed aggregation, correlation, and identity cube creation.</li>
-        <li>Worked on provisioning plan and after-provisioning rule.</li>
-        <li>Transferred identity data from IdentityIQ to a target CSV application.</li>
-      </ul>
-    </div>
-
-    <div class="project">
-      <h3>Smart Water Monitoring System</h3>
-      <p><strong>Domain:</strong> IoT / Embedded Systems / Monitoring System</p>
-      <ul>
-        <li>Designed a system for monitoring water quality and pipeline conditions.</li>
-        <li>Focused on leak detection, contamination detection, and pipeline management.</li>
-        <li>Worked on real-world problem solving using monitoring-based architecture.</li>
-      </ul>
-    </div>
-
-    <div class="project">
-      <h3>Cricket Score Book Using C</h3>
-      <p><strong>Tech Stack:</strong> C Programming</p>
-      <ul>
-        <li>Created a console-based cricket score management application.</li>
-        <li>Implemented player score tracking and match summary features.</li>
-        <li>Strengthened logic-building and C programming fundamentals.</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="certifications">
-    <h2>Certifications & Learning</h2>
+  <div class="card">
+    <h3>Software Developer - Holtec International</h3>
+    <p><strong>Location:</strong> Pune, Maharashtra</p>
+    <p><strong>Duration:</strong> April 2024 - April 2026</p>
     <ul>
-      <li>SailPoint IdentityIQ Training - Rules, Workflow, Lifecycle Manager, Provisioning, Certifications, Roles</li>
-      <li>.NET Full Stack Development Preparation</li>
-      <li>DevOps Learning - Git, Jenkins, Docker, Kubernetes, Ansible, Terraform, ELK Stack</li>
-      <li>SQL Server and Database Development Practice</li>
+      <li>Worked on enterprise web applications using ASP.NET Core, ASP.NET MVC, Blazor, C#, SQL Server, JavaScript, HTML, and CSS.</li>
+      <li>Worked on Corp Application modules such as Employees, Daily Report, WFH, Travel, PTO, and Executive Reports.</li>
+      <li>Contributed to migration of Corp Application from ASP.NET MVC to ASP.NET Core.</li>
+      <li>Developed Generic Timesheet Report in HIP6 Application for multiple departments.</li>
+      <li>Worked on HR Review Application by implementing User Guide and Return Employee Evaluation to Supervisor feature.</li>
+      <li>Worked on MetamicV2 and BOM applications for testing, bug fixing, and minor enhancements.</li>
+      <li>Implemented SSO in UPNFinder application built using Blazor.</li>
+      <li>Developed REST API for fetching material details used in manufacturing.</li>
+      <li>Improved SQL performance by removing unnecessary joins, implementing pagination, and fetching only required columns.</li>
     </ul>
-  </section>
+  </div>
 
-  <section id="education">
-    <h2>Education</h2>
-    <p>
-      <strong>B.Tech - Electronics & Instrumentation Engineering</strong><br />
-      Silicon Institute of Technology<br />
-      CGPA: 8.09
-    </p>
-  </section>
+  <div class="card">
+    <h3>Embedded Software Developer - PHYTEC India</h3>
+    <p><strong>Location:</strong> Bengaluru, Karnataka</p>
+    <p><strong>Duration:</strong> August 2023 - February 2024</p>
+    <ul>
+      <li>Worked on embedded software development and hardware-software integration concepts.</li>
+      <li>Developed and debugged embedded C code for real-time and IoT-based systems.</li>
+      <li>Worked with engineering teams to understand hardware specifications and convert them into software implementations.</li>
+    </ul>
+  </div>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p><strong>Email:</strong> rajsankalp805@gmail.com</p>
-    <p><strong>GitHub:</strong> https://github.com/rajsankalp805</p>
-    <p><strong>LinkedIn:</strong> https://www.linkedin.com/in/sankalp-raj-singh-78a628208</p>
-    <p><strong>Portfolio:</strong> https://rajsankalp805.github.io</p>
-  </section>
+  <div class="card">
+    <h3>Embedded Software Developer Intern - PHYTEC India</h3>
+    <p><strong>Location:</strong> Bhubaneswar, Odisha</p>
+    <p><strong>Duration:</strong> September 2022 - February 2023</p>
+    <ul>
+      <li>Built embedded system projects using C programming.</li>
+      <li>Worked on Smart Temperature Control on STM32 and RFID-based access control system.</li>
+      <li>Strengthened understanding of embedded systems, microcontrollers, and hardware communication.</li>
+    </ul>
+  </div>
+</section>
 
-  <footer>
-    <p>© 2026 Sankalp Raj Singh | Built with HTML, CSS and GitHub Pages</p>
-  </footer>
+<section id="projects">
+  <h2>Projects & Work Highlights</h2>
+
+  <div class="card">
+    <h3>Corp Application Modernization</h3>
+    <p><strong>Tech Stack:</strong> ASP.NET MVC, ASP.NET Core, C#, SQL Server, JavaScript</p>
+    <ul>
+      <li>Worked on migration from ASP.NET MVC to ASP.NET Core.</li>
+      <li>Handled business modules including Employees, Daily Report, WFH, Travel, PTO, and Executive Reports.</li>
+      <li>Performed bug fixing, enhancements, report improvements, and application maintenance.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Generic Timesheet Report - HIP6 Application</h3>
+    <p><strong>Tech Stack:</strong> ASP.NET MVC, C#, SQL Server</p>
+    <ul>
+      <li>Developed a generic timesheet report for all departments.</li>
+      <li>Reduced dependency on department-specific reports by creating a reusable reporting solution.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>HR Review Application Enhancement</h3>
+    <p><strong>Tech Stack:</strong> ASP.NET MVC, C#, SQL Server</p>
+    <ul>
+      <li>Implemented User Guide functionality for new users.</li>
+      <li>Added Return Employee Evaluation to Supervisor feature for HOD-level review workflow.</li>
+      <li>Improved evaluation handling before final sign-off.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Material Details API</h3>
+    <p><strong>Tech Stack:</strong> ASP.NET Core Web API, C#, SQL Server</p>
+    <ul>
+      <li>Developed API for fetching details of materials used in manufacturing.</li>
+      <li>Worked on backend logic, data retrieval, response handling, and API testing.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Blazor Applications - MetamicV2, BOM, UPNFinder</h3>
+    <p><strong>Tech Stack:</strong> Blazor, C#, SQL Server</p>
+    <ul>
+      <li>Worked on testing, bug fixing, and minor enhancements in Blazor applications.</li>
+      <li>Implemented SSO in UPNFinder application.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>SailPoint IdentityIQ CSV Provisioning Lab</h3>
+    <p><strong>Tech Stack:</strong> SailPoint IdentityIQ, Beanshell, MySQL, Tomcat, CSV Application</p>
+    <ul>
+      <li>Created TrustedCSV and TargetCSV applications in SailPoint IdentityIQ.</li>
+      <li>Worked on aggregation, correlation, identity cube, provisioning plan, and after-provisioning rule.</li>
+      <li>Transferred identity data from IdentityIQ to a target CSV application in a lab environment.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="academic-projects">
+  <h2>Academic Projects</h2>
+
+  <div class="card">
+    <h3>Emergency Vehicle Traffic System</h3>
+    <ul>
+      <li>Designed RFID and IR sensor-based system for automatic emergency vehicle detection.</li>
+      <li>Implemented automated signal control logic for intersections.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Smart Street Light Control</h3>
+    <ul>
+      <li>Designed sensor-driven smart lighting system for energy-efficient automation.</li>
+      <li>Achieved around 40-45% power reduction through intelligent control logic.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Gym Website</h3>
+    <ul>
+      <li>Developed responsive website using HTML5, CSS3, and Git version control.</li>
+      <li>Implemented secure authentication-related UI flow.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Cricket Scorebook CLI</h3>
+    <ul>
+      <li>Built command-line application using C programming.</li>
+      <li>Implemented score tracking, player data handling, and match summary logic.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="certifications">
+  <h2>Licenses & Certifications</h2>
+
+  <div class="grid">
+    <div class="box">
+      <h3>AWS Solution Architect Course</h3>
+      <p>Issued by Intellipaat</p>
+      <p>Issue Date: June 15, 2026</p>
+      <a href="intellipaat-certificate.pdf" target="_blank">View Certificate</a>
+    </div>
+
+    <div class="box">
+      <h3>C# (.NET 6/7/8)</h3>
+      <p>Issued by CloudHire</p>
+    </div>
+
+    <div class="box">
+      <h3>Object-Oriented Programming</h3>
+      <p>Issued by CloudHire</p>
+    </div>
+
+    <div class="box">
+      <h3>REST APIs</h3>
+      <p>Issued by CloudHire</p>
+    </div>
+
+    <div class="box">
+      <h3>Entity Framework Core</h3>
+      <p>Issued by CloudHire</p>
+    </div>
+
+    <div class="box">
+      <h3>SQL Server</h3>
+      <p>Issued by CloudHire</p>
+    </div>
+
+    <div class="box">
+      <h3>Database Design & Optimization</h3>
+      <p>Professional Learning / Resume Highlight</p>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <h2>Education</h2>
+
+  <div class="card">
+    <h3>B.Tech - Electronics & Instrumentation Engineering</h3>
+    <p>Silicon Institute of Technology, Bhubaneswar</p>
+    <p>CGPA: 8.04 / 10 | 2019 - 2023</p>
+  </div>
+
+  <div class="card">
+    <h3>Senior Secondary - CBSE</h3>
+    <p>Keshav Saraswati Vidya Mandir, Patna</p>
+    <p>Marks: 59.6% | 2019</p>
+  </div>
+
+  <div class="card">
+    <h3>Secondary - CBSE</h3>
+    <p>Litera Valley School, Patna</p>
+    <p>CGPA: 8.2 / 10 | 2017</p>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p><strong>Email:</strong> rajsankalp805@gmail.com</p>
+  <p><strong>LinkedIn:</strong> https://www.linkedin.com/in/sankalp-raj-singh-78a628208</p>
+  <p><strong>GitHub:</strong> https://github.com/rajsankalp805</p>
+  <p><strong>Portfolio:</strong> https://rajsankalp805.github.io</p>
+</section>
+
+<footer>
+  <p>© 2026 Sankalp Raj Singh | Software Developer Portfolio</p>
+</footer>
 
 </body>
 </html>
